@@ -30,6 +30,9 @@ class UserListComponent extends PureComponent {
       refreshing: false
     };
   }
+  /**
+   * This function will Refresh List Item.
+   */
   handleRefresh = () => {
     this.setState(
       {
@@ -42,7 +45,9 @@ class UserListComponent extends PureComponent {
       }
     );
   };
-
+  /**
+   * This function will Call List have More Data.
+   */
   handleLoadMore = () => {
     this.setState(
       {
@@ -53,7 +58,9 @@ class UserListComponent extends PureComponent {
       }
     );
   };
-
+  /**
+   * This function will Separate List Item.
+   */
   renderSeparator = () => {
     return (
       <View
@@ -66,10 +73,15 @@ class UserListComponent extends PureComponent {
       />
     );
   };
-
+  /**
+   * This function will Add First Item as Search in User List.
+   */
   renderHeader = () => {
     return <TextInput placeholder="Type Here..." />;
   };
+  /**
+   * This function will call Web Service and returns List of Users.
+   */
   makeRemoteRequest = () => {
     const { page, seed } = this.state;
     const url = `https://randomuser.me/api/?seed=${seed}&page=${page}&results=20`;
@@ -89,6 +101,9 @@ class UserListComponent extends PureComponent {
         this.setState({ error, loading: false });
       });
   };
+  /**
+   * This function will Add at End Item as Progress Indicator in User List.
+   */
   renderFooter = () => {
     if (!this.state.loading) return null;
 
@@ -104,6 +119,9 @@ class UserListComponent extends PureComponent {
       </View>
     );
   };
+  /**
+   * This function will Show User List Item Design and UI.
+   */
   renderItem(item, index) {
     return (
       <View>
@@ -117,6 +135,9 @@ class UserListComponent extends PureComponent {
       </View>
     );
   }
+  /**
+   * This function will render screen Design and UI.
+   */
   render() {
     return (
       <View>

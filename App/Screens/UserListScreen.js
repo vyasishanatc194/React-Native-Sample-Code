@@ -13,6 +13,10 @@ import UserListStyle from "../Resources/UserListStyle";
 import UserListComponent from "../Componets/UserListComponent";
 
 class UserListScreen extends Component {
+  /**
+   * This function will call initiate State which can used
+   * in whole screen.
+   */
   constructor(props) {
     super(props);
 
@@ -25,9 +29,18 @@ class UserListScreen extends Component {
       refreshing: false
     };
   }
+
+  /**
+   * This function will call initiate Screen.
+   */
   componentDidMount() {
     this.makeRemoteRequest();
   }
+
+  /**
+   * This function will call Web Service and returns List of Users.
+   */
+
   makeRemoteRequest = () => {
     const { page, seed } = this.state;
     const url = `https://randomuser.me/api/?seed=${seed}&page=${page}&results=20`;
@@ -47,6 +60,9 @@ class UserListScreen extends Component {
         this.setState({ error, loading: false });
       });
   };
+  /**
+   * This function will render screen Design and UI.
+   */
   render() {
     return (
       <View style={UserListStyle.container}>
