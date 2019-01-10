@@ -8,7 +8,7 @@
  */
 
 import React, { Component } from "react";
-import { View } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import UserListStyle from "../Resources/UserListStyle";
 import UserListComponent from "../Componets/UserListComponent";
 
@@ -61,12 +61,22 @@ class UserListScreen extends Component {
       });
   };
   /**
+   * This function will navigate to Add User and Payment Screen.
+   */
+  doAddUser(screen) {
+    const { navigate } = this.props.navigation;
+    navigate(screen);
+  }
+  /**
    * This function will render screen Design and UI.
    */
   render() {
     return (
       <View style={UserListStyle.container}>
         <UserListComponent data={this.state.data} />
+        <TouchableOpacity onPress={() => this.doAddUser("StripePayment")}>
+          <Text>Add User</Text>
+        </TouchableOpacity>
       </View>
     );
   }

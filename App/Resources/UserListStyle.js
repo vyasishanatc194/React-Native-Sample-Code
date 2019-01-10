@@ -3,7 +3,7 @@
  * User: Ishan Vyas
  * Date: 09/01/19
  * Time: 12:00 PM
- * Title : Main App File
+ * Title : User List Style File
  * Description : This file used for maintain screen Design and UI.
  */
 import { StyleSheet } from "react-native";

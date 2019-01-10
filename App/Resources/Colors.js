@@ -8,6 +8,9 @@
  */
 const Colors = {
   colorWhite: "#FFFFFF",
-  colorSeparator: "#CED0CE"
+  colorSeparator: "#CED0CE",
+  colorInput:"#222222",
+  colorInputBg:"#424242",
+  colorBorder:"#4025D8"
 };
 export default Colors;

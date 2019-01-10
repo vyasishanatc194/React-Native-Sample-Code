@@ -9,9 +9,13 @@
 
 import { createStackNavigator } from "react-navigation";
 import UserListScreen from "./Screens/UserListScreen";
+import StripPaymentScreen from "./Screens/StripPaymentScreen";
+import PaymentConfirmationScreen from "./Screens/PaymentConfirmationScreen";
 
 const App = createStackNavigator({
-  Users: { screen: UserListScreen }
+  Users: { screen: UserListScreen },
+  StripPayment: { screen: StripPaymentScreen },
+  PaymentConfirmation: { screen: PaymentConfirmationScreen },
 });
 
 export default App;
