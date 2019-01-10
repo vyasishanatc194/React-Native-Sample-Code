@@ -50,6 +50,7 @@ class PaymentConfirmationScreen extends Component {
       }
     };
   };
+  
   doFinish(screen) {
     const resetAction = StackActions.reset({
       index: 0,
