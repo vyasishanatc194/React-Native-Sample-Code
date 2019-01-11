@@ -1,3 +1,4 @@
 # React-Native-Sample-Code
 
-This Sample Code For Listing Users and his information from WebService.
+This is Sample Code For React Native and Stripe Payment Integration
+
